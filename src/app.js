@@ -1,17 +1,19 @@
 $(document).ready(function() {
 
-  if (!document.createElement('video').canPlayType) {
+  if (!document.createElement('audio').canPlayType) {
     $("audio_controls").hide();
     return;
   }
 
-  var video = document.getElementById("audio");
+  var audio = document.getElementById("audio");
 
-  $("#play_button").bind("click", function() {
-    audio.play();
-  });
-
-  $("#pause_button").bind("click", function() {
-    audio.pause();
+  $("#play_toggle").bind("click", function() {
+    if (audio.paused) {
+      audio.play();
+      $(this).html("Pause");
+    } else {
+      audio.pause();
+      $(this).html("Play");
+    }
   });
 });

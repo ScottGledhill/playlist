@@ -16,4 +16,11 @@ $(document).ready(function() {
       $(this).html("Play");
     }
   });
+
+
+  $("#next").bind("click", function() {
+    audio.pause();
+    $('playlist li.active').next();
+    audio.play();
+  });
 });

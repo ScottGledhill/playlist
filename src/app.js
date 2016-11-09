@@ -1,6 +1,20 @@
 $(document).ready(function() {
-  SC.get('/playlists/273704202').then(function(tracks){
-    alert('Latest track: ' + tracks[1].title);
+    var i1 = 0;
+    var currentSong = 0;
+    var currentMusicState = 'play';
+    var song = {
+        title: [],
+        artist: [],
+        id: []
+    };
+
+  SC.get('/playlists/230085336').then(function (playlist) {
+    playlist.tracks.forEach(function (track) {
+      console.log(song.id[i1] = track.id);
+      song.title[i1] = track.title;
+      song.artist[i1] = track.user.username;
+      i1++;
+    });
   });
 
   if (!document.createElement('audio').canPlayType) {

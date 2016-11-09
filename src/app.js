@@ -2,20 +2,15 @@ $(document).ready(function() {
     var i1 = 0;
     var currentSong = 0;
     var currentMusicState = 'play';
-    var song = {
-        title: [],
-        artist: [],
-        id: []
-    };
+    var list = [];
 
   SC.get('/playlists/230085336').then(function (playlist) {
     playlist.tracks.forEach(function (track) {
-      console.log(song.id[i1] = track.id);
-      song.title[i1] = track.title;
-      song.artist[i1] = track.user.username;
-      i1++;
+      list.push({id: track.id, title: track.title, url: track.stream_url});
     });
+    console.log(list)
   });
+
 
   if (!document.createElement('audio').canPlayType) {
     $("audio_controls").hide();

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  SC.get('/playlists/273704202').then(function(tracks){
+    alert('Latest track: ' + tracks[1].title);
+  });
 
   if (!document.createElement('audio').canPlayType) {
     $("audio_controls").hide();

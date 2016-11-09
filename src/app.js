@@ -17,7 +17,6 @@ $(document).ready(function() {
     }
   });
 
-
   $("#next").bind("click", function() {
     audio.pause();
     $('playlist li.active').next();

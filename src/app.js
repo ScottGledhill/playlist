@@ -30,21 +30,9 @@ $(document).ready(function() {
 
   var audio = document.getElementById("audio");
 
-
   $('#audio').on('click', function(){
     SC.stream(list.url, function(sound){
       sound.play();
     });
-  });
-
-  if (!document.createElement('audio').canPlayType) {
-    $("audio_controls").hide();
-    return;
-  }
-
-  $("#next").bind("click", function() {
-    audio.pause();
-    $('playlist li.active').next();
-    audio.play();
   });
 });

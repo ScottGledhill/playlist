@@ -1,6 +1,14 @@
 
-.player-button {
-  width: 50px;
+body {
+  background-color: OldLace;
+}
+
+.track-title {
+  font-style: oblique;
   text-align: center;
   cursor: pointer;
+}
+
+audio {
+    background-color: #95B9C7;
 }

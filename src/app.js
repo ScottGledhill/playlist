@@ -42,17 +42,6 @@ $(document).ready(function() {
     return;
   }
 
-
-  $("#play_toggle").bind("click", function() {
-    if (audio.paused) {
-      audio.play();
-      $(this).html("Pause");
-    } else {
-      audio.pause();
-      $(this).html("Play");
-    }
-  });
-
   $("#next").bind("click", function() {
     audio.pause();
     $('playlist li.active').next();

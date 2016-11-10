@@ -17,6 +17,8 @@ $(document).ready(function() {
       );
     }
 
+
+
     $('.track-title').click(function(val) {
       var audio = $("#audio");
       var track = val.target.id;

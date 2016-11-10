@@ -6,18 +6,28 @@ $(document).ready(function() {
 
   SC.get('/playlists/230085336').then(function (playlist) {
     playlist.tracks.forEach(function (track) {
-      list.push({id: track.id, title: track.title, url: track.stream_url});
+      list.push({title: track.title, url: track.stream_url});
     });
-    console.log(list)
+    for(i=0; i < list.length; i++) {
+      $('#title').append('<ul>'+list[i].title+'</ul>');
+    }
+    
   });
 
+  var audio = document.getElementById("audio");
+
+
+  $('#audio').on('click', function(){
+    SC.stream(list.url, function(sound){
+      sound.play();
+    });
+  });
 
   if (!document.createElement('audio').canPlayType) {
     $("audio_controls").hide();
     return;
   }
 
-  var audio = document.getElementById("audio");
 
   $("#play_toggle").bind("click", function() {
     if (audio.paused) {

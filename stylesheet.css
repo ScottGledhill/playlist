@@ -9,6 +9,9 @@ body {
   cursor: pointer;
 }
 
-audio {
-    background-color: #95B9C7;
+label {
+    display: block;
+    background: lightgrey;
+    width: 100px;
+    height: 100px;
 }

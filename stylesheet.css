@@ -9,11 +9,6 @@ body {
   cursor: pointer;
 }
 
-#audio {
-  background-color: yellow;
-}
-
-
 .playing {
   color: BlueViolet;
   font-style: normal;

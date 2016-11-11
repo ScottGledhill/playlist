@@ -9,25 +9,11 @@ body {
   cursor: pointer;
 }
 
-label {
-    display: block;
-    background: lightgrey;
-    width: 100px;
-    height: 100px;
+#audio {
+  background-color: yellow;
 }
 
-#button {
-   padding: 6px;
-   width: 65px;
-   background: #FF69B4;
-   color: black;
-   font-size: 13px;
-   font-weight: bold;
-   line-height: 0.9em;
-   border: 1px dashed black;
-   border-radius: 7px;
-   box-shadow: 0 0 0 1px black, 1px 1px 4px 3px rgba(10, 10, 0, 0.5);
-   text-shadow: -1px -1px #aa3030;
-   font-weight: normal;
-   cursor: pointer;
+
+.playing {
+  color: BlueViolet;
 }

@@ -10,6 +10,7 @@ body {
 }
 
 .playing {
+  position: absolute; top:32px; left:10px;
   color: BlueViolet;
   font-style: normal;
 }

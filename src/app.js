@@ -27,9 +27,7 @@ $(document).ready(function() {
       $(val.target).toggleClass('playing');
     });
   });
-
-  var audio = document.getElementById("audio");
-
+  
   $('#audio').on('click', function(){
     SC.stream(list.url, function(sound){
       sound.play();

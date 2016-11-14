@@ -20,14 +20,13 @@ $(document).ready(function() {
       var track = val.target.id;
       var combinedUrl = list[track].url + "?client_id=8e74002fd2542f89231c5133c2a54833";
       $("#player").attr("src", combinedUrl);
-      $("id").attr("id", "playing");
       audio[0].pause();
       audio[0].load();
       audio[0].oncanplaythrough = audio[0].play();
       $(val.target).toggleClass('playing');
     });
   });
-  
+
   $('#audio').on('click', function(){
     SC.stream(list.url, function(sound){
       sound.play();
